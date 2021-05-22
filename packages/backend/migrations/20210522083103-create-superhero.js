@@ -18,13 +18,13 @@ module.exports = {
         type: Sequelize.STRING
       },
       superpowers: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       catchPhrase: {
         type: Sequelize.STRING
       },
       images: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       createdAt: {
         allowNull: false,
