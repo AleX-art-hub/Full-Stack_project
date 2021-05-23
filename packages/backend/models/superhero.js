@@ -1,15 +1,14 @@
 'use strict';
-const {Model} = require('sequelize');
+const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Superhero extends Model {
-      static associate(models) {
-    }
-  };
+    static associate(models) {}
+  }
   Superhero.init(
     {
       nickname: {
         type: DataTypes.STRING,
-       require: true,
+        require: true,
         unique: true,
       },
       realName: {
@@ -25,13 +24,13 @@ module.exports = (sequelize, DataTypes) => {
       images: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         defaultValue: [],
-      }
-    }, 
+      },
+    },
     {
       sequelize,
       modelName: 'Superhero',
       underscored: true,
-      tableName: 'superheroes'
+      tableName: 'superheroes',
     }
   );
   return Superhero;
