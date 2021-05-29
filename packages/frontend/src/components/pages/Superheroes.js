@@ -7,7 +7,7 @@ export default function Superheroes(){
         <div>
             <HeroForm/>
             <hr/>
-            <HeroForm/>
+            <HeroesList/>
         </div>
     )
 }
